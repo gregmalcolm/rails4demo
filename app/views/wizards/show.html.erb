@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @wizard.name %>
+</p>
+
+<p>
+  <strong>Alignment:</strong>
+  <%= @wizard.alignment %>
+</p>
+
+<p>
+  <strong>Spells:</strong>
+  <%= @wizard.spells %>
+</p>
+
+<p>
+  <strong>Bag of holding:</strong>
+  <%= @wizard.bag_of_holding %>
+</p>
+
+<%= link_to 'Edit', edit_wizard_path(@wizard) %> |
+<%= link_to 'Back', wizards_path %>

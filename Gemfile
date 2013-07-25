@@ -3,8 +3,7 @@ source 'https://rubygems.org'
 gem 'rails',     github: 'rails/rails'
 gem 'arel',      github: 'rails/arel'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'pg'
 
 # Use edge version of sprockets-rails
 gem 'sprockets-rails', github: 'rails/sprockets-rails'
