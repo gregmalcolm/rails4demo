@@ -7,12 +7,30 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Wizard.delete_all
-Wizard.create name: 'Gandalf', alignment: 'good', spells: ['Magic Missile', 'Heal']
-Wizard.create name: 'Souron', alignment: 'evil', spells: ['Magic Missile', 'Stabby Stabby', 'Hoover']
-Wizard.create name: 'Willow', alignment: 'good', spells: ['Sanctorium', 'Simulated Sunlight', 'Time Loop']
-Wizard.create name: 'Evil Willow', alignment: 'evil', spells: ['Sphere of Infinite Agonies', 'Living Flame', 'Vine Bondage']
-Wizard.create name: 'Rincewind', alignment: 'neutral', spells: ['Run Away']
-Wizard.create name: 'Bellatrix', alignment: 'evil', spells: ['Avada Kedavra', 'Accio']
+Wizard.create name: 'Gandalf',
+              alignment: 'good',
+              spells: ['Magic Missile', 'Heal'],
+              bag_of_holding: { wand: 'teal', cupboard: { kitchen_sink: 'marble', pants: 'big' } }
+Wizard.create name: 'Souron',
+              alignment: 'evil',
+              spells: ['Magic Missile', 'Stabby Stabby', 'Hoover'],
+              bag_of_holding: { wand: 'unicorn teeth', toothbrush: 'green' }
+Wizard.create name: 'Willow',
+              alignment: 'good',
+              spells: ['Sanctorium', 'Simulated Sunlight', 'Time Loop'],
+              bag_of_holding: { wand: 'velvet', toothbrush: 'purple' }
+Wizard.create name: 'Evil Willow',
+              alignment: 'evil',
+              spells: ['Sphere of Infinite Agonies', 'Living Flame', 'Vine Bondage'],
+              bag_of_holding: { wand: 'unicorn tears', toothbrush: 'evil' }
+Wizard.create name: 'Rincewind',
+              alignment: 'neutral',
+              spells: ['Run Away'],
+              bag_of_holding: { wand: 'plastic', toothbrush: 'brown' }
+Wizard.create name: 'Bellatrix',
+              alignment: 'evil',
+              spells: ['Avada Kedavra', 'Accio'],
+              bag_of_holding: { wand: 'goose bone' }
 
 Doctor.delete_all
 Companion.delete_all
