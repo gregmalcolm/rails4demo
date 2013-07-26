@@ -12,7 +12,11 @@
 
 <p>
   <strong>Spells:</strong>
-  <%= @wizard.spells %>
+  <ul>
+  <% @wizard.spells.each do |spell| %>
+    <li><%=spell%></li>
+  <% end %>
+  </ul>
 </p>
 
 <p>

@@ -39,7 +39,7 @@ end
 
 # Use unicorn as the app server
 # gem 'unicorn'
-gem 'thin'
+gem 'puma'
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
@@ -48,3 +48,4 @@ gem 'thin'
 gem 'debugger', group: [:development, :test]
 
 gem 'cache_digests'
+gem 'rb-fsevent'

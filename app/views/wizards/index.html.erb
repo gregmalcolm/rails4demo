@@ -5,8 +5,6 @@
     <tr>
       <th>Name</th>
       <th>Alignment</th>
-      <th>Spells</th>
-      <th>Bag of holding</th>
       <th></th>
       <th></th>
       <th></th>
@@ -18,8 +16,6 @@
       <tr>
         <td><%= wizard.name %></td>
         <td><%= wizard.alignment %></td>
-        <td><%= wizard.spells %></td>
-        <td><%= wizard.bag_of_holding %></td>
         <td><%= link_to 'Show', wizard %></td>
         <td><%= link_to 'Edit', edit_wizard_path(wizard) %></td>
         <td><%= link_to 'Destroy', wizard, method: :delete, data: { confirm: 'Are you sure?' } %></td>

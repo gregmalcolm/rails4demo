@@ -1,0 +1,2 @@
+module EunuchsHelper
+end

@@ -1,6 +1,10 @@
 class WizardsController < ApplicationController
   before_action :set_wizard, only: [:show, :edit, :update, :destroy]
 
+  def index
+    @wizards = Wizard.all
+  end
+
   def create
     @wizard = Wizard.new(wizard_params)
 

@@ -1,9 +1,9 @@
 Rails4Demo::Application.routes.draw do
   resources :doctors
-
   resources :companions
-
   resources :wizards
+  get 'eunuchs' => 'eunuchs#index'
+  get 'eunuchs/server' => 'eunuchs#server'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
