@@ -6,6 +6,14 @@ class EunuchsController < ApplicationController
   def index
   end
 
+  def simple
+    100.times do |bottle|
+      sleep 0.1
+      response.stream.write "#{bottle} bottles of beer on the wall, #{bottle} bottles of beer...\n<br>"
+    end
+    response.stream.close
+  end
+
   def server
     # SSE expects the `text/event-stream` content type
     response.headers['Content-Type'] = 'text/event-stream'
