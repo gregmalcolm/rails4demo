@@ -1,4 +1,8 @@
 Rails4Demo::Application.routes.draw do
+  resources :doctors
+
+  resources :companions
+
   resources :wizards
 
   # The priority is based upon order of creation: first created -> highest priority.

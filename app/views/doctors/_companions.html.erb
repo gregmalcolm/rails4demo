@@ -1,0 +1,11 @@
+<strong>Companions:</strong>
+<ul>
+<% @doctor.companions.each do |companion| %>
+  <% cache companion do %>
+    <% wait 0.5 %>
+    <li>
+      <%= link_to companion.name, companion %>
+      </li>
+  <% end %>
+<% end %>
+</ul>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<b>Updated at <%= time %></b>
+
+<% cache @doctor do %>
+
+  <% wait 2 %>
+  <p>
+    <strong>Actor:</strong>
+    <%= @doctor.actor %>
+  </p>
+
+  <p>
+    <strong>Number:</strong>
+    <%= @doctor.number %>
+  </p>
+
+
+  <%= render 'companions' %>
+
+  <%= link_to 'Edit', edit_doctor_path(@doctor) %> |
+  <%= link_to 'Back', doctors_path %>
+
+<% end %>

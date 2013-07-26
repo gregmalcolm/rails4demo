@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @companion.name %>
+</p>
+
+<p>
+  <strong>Skills:</strong>
+  <%= @companion.skills %>
+</p>
+
+<%= link_to 'Edit', edit_companion_path(@companion) %> |
+<%= link_to 'Back', companions_path %>

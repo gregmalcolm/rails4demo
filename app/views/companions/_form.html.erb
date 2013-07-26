@@ -1,0 +1,25 @@
+<%= form_for(@companion) do |f| %>
+  <% if @companion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@companion.errors.count, "error") %> prohibited this companion from being saved:</h2>
+
+      <ul>
+      <% @companion.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :skills %><br>
+    <%= f.text_field :skills %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
