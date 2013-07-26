@@ -2,7 +2,7 @@
 <ul>
 <% @doctor.companions.each do |companion| %>
   <% cache companion do %>
-    <% wait 0.5 %>
+    <% wait 1 %>
     <li>
       <%= link_to companion.name, companion %>
       </li>
