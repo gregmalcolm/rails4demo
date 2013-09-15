@@ -1,3 +1,6 @@
 == New Stuff in Rails 4 Demo
 
 Sandbox Rails app for demonstrating changes in Rails 4
+
+For the activerecord:Live streaming demo I'm using the mac version of pstree
+(downloaded through Brew), and it's rigged to look for iTerm processes.
