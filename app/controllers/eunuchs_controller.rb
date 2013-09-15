@@ -8,7 +8,7 @@ class EunuchsController < ApplicationController
 
   def simple
     100.times do |bottle|
-      sleep 0.1
+      sleep 0.2
       response.stream.write "#{bottle} bottles of beer on the wall, #{bottle} bottles of beer...\n<br>"
     end
     response.stream.close
@@ -22,9 +22,10 @@ class EunuchsController < ApplicationController
 
     begin
       loop do
-        sse.write({ time: Time.now,
-                    data: `pstree -s Terminal`})
-        sleep 1
+        sse.write({ command: `pstree -s iTerm`,
+                    time: Time.now().strftime("%H:%M:%S.%3N")},
+                  event: 'refreshPstree')
+        #sleep 1
       end
     rescue IOError
       # When the client disconnects, we'll get an IOError on write

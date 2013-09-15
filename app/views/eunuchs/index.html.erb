@@ -1,10 +1,21 @@
+<h1>Streaming Demo</h1>
+<h3>Command: <strong>pstree -s Terminal</strong><h3>
+<strong id="timestamp">Updated at: Never ever></strong>
+<div id="output"></div>
+
 <script>
 jQuery(document).ready(function() {
   setTimeout(function() {
+    // Json feed
     var source = new EventSource('/eunuchs/server');
-    source.addEventListener('refresh', function(e) {
-      window.location.reload();
+
+    // Listen for "refresh" SSE event
+    source.addEventListener('refreshPstree', function(e) {
+      var data = JSON.parse(e.data);
+      $("#timestamp").html("Updated at: " + data.time);
+      $("#output").html("<pre>"+data.command+"</pre>");
     });
+
     console.log(source)
   }, 1);
 });
