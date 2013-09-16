@@ -49,3 +49,4 @@ gem 'debugger', group: [:development, :test]
 
 gem 'cache_digests'
 gem 'rb-fsevent'
+gem 'pry-plus'
