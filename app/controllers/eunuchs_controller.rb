@@ -8,7 +8,7 @@ class EunuchsController < ApplicationController
 
   def simple
     100.times do |bottle|
-      sleep 0.2
+      sleep 0.1
       response.stream.write "#{bottle} bottles of beer on the wall, #{bottle} bottles of beer...\n<br>"
     end
     response.stream.close
