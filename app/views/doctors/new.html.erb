@@ -2,42 +2,54 @@
 
 <%= form_for(@doctor) do |f| %>
 
-  <pre><%="f.collection_check_boxes :tags, %w[ruby rails design], :to_s, :to_s" %></pre>
+ <pre><%= <<-POCKET
+     collection_select :left_pocket_contents, ["Sonic screwdriver", "Fez lint", "Bad wolf"], :to_s, :to_s"
+   POCKET
+  %></pre>
   <div class="field">
-    <%= f.label :pocket_contents %>
-    <%= f.collection_check_boxes :pocket_contents,
-      ["Sonic screwdriver",
-       "Fez lint",
-       "Bad wolf"], :to_s, :to_s  %>
+    <%= f.label :left_pocket_contents %>
+    <%= f.collection_select :left_pocket_contents,
+      ["Sonic screwdriver", "Fez lint", "Bad wolf"], :to_s, :to_s  %>
   </div>
 
   <br><br>
-  <pre><%="f.number_field :number" %></pre>
+  <pre><%= <<-POCKET
+     collection_check_boxes :left_pocket_contents, ["Sonic screwdriver", "Fez lint", "Bad wolf"], :to_s, :to_s"
+   POCKET
+  %></pre>
+  <div class="field">
+    <%= f.label :right_pocket_contents %>
+    <%= f.collection_check_boxes :right_pocket_contents,
+      ["Sonic screwdriver", "Fez lint", "Bad wolf"], :to_s, :to_s  %>
+  </div>
+
+  <br><br>
+  <pre><%="number_field :number" %></pre>
   <div class="field">
     <%= f.label :doctor_number %><br>
     <%= f.number_field :doctor_number %>
   </div>
 
   <br><br>
-  <pre><%="f.date_field :week" %></pre>
+  <pre><%="date_field :week" %></pre>
   <div class="field">
     <%= f.date_field :date %>
   </div>
 
   <br><br>
-  <pre><%="f.week_field :week" %></pre>
+  <pre><%="week_field :week" %></pre>
   <div class="field">
     <%= f.week_field :week %>
   </div>
 
   <br><br>
-  <pre><%="f.month_field :week" %></pre>
+  <pre><%="month_field :week" %></pre>
   <div class="field">
     <%= f.month_field :month %>
   </div>
 
   <br><br>
-  <pre><%="f.color_field :colour" %></pre>
+  <pre><%="color_field :colour" %></pre>
   <div class="field">
     <%= f.color_field :colour %>
   </div>

@@ -20,8 +20,8 @@ module Rails4Demo
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     console do
-      require "pry"
-      config.console = Pry
+      #require "pry"
+      #config.console = Pry
     end
   end
 end
